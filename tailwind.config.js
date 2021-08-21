@@ -12,6 +12,13 @@ module.exports = {
     },
     darkMode: 'class', // or 'media' or 'class'
     theme: {
+      boxShadow: {
+        sm: '0 1px 2px 0 rgba(0, 0, 0, 0.15)'
+      },
+      screens: {
+        'md': '768px',
+        'lg': '1280px'
+      },
       extend: {},
     },
     variants: {

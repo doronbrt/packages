@@ -1,0 +1,21 @@
+<div class="theme w-full h-screen flex flex-col justify-between">
+  <header class="h-14 bg-[#151a30] w-full px-3">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <app-menu-tab-item [menuItem]="{title: 'Dashboard', linkTo: 'dashboard'}"></app-menu-tab-item>
+        <app-menu-tab-item [menuItem]="{title: 'Add Package', linkTo: 'addPackage'}"></app-menu-tab-item>
+      </div>
+      <div>
+        <app-menu-tab-item [menuItem]="{title: 'Login', linkTo: 'login'}"></app-menu-tab-item>
+      </div>
+    </div>
+
+
+  </header>
+  <main class="h-full relative p-4 bg-[#151a30eb]">
+    <router-outlet></router-outlet>
+    <app-alert *ngIf="isAlert.isOpen"></app-alert>
+    <div *ngIf="isLoading | async"><app-loader></app-loader></div>
+  </main>
+  <footer class="h-14 bg-[#151a30] flex justify-center items-center align-bottom"><div>this is the footer</div></footer>
+</div>

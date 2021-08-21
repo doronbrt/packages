@@ -1,4 +1,34 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "themes";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: OpenSansCondensed-Light;
+  src: url(./assets/fonts/OpenSansCondensed-Light.ttf);
+}
+@font-face {
+  font-family: PaletteMosaic-Regular;
+  src: url(./assets/fonts/PaletteMosaic-Regular.ttf);
+}
+@font-face {
+  font-family: Inconsolata-Regular;
+  src: url(./assets/fonts/Inconsolata-Regular.ttf);
+}
+
+* {
+  font-family: Inconsolata-Regular, "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  color: #ffffff;
+  h1 {
+    font-family: Inconsolata-Regular, "Segoe UI", Tahoma, Geneva, Verdana,
+      sans-serif;
+  }
+  input,
+  select {
+    background: #b0bcf1eb !important;
+    border: none;
+    outline: none;
+  }
+}

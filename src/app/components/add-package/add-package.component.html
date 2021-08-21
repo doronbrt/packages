@@ -1,0 +1,22 @@
+<form action="submit" (submit)="getPackageDetails()" [formGroup]="form" *ngIf="form">
+  <div class="flex justify-center items-center">
+  <div class="max-w-5xl">
+  <div class="p-4">
+    <input type="text" formControlName="trackNum" class="w-full text-[#151a30]">
+  </div>
+  <div class="p-4">
+    <select formControlName="carrier" class="text-[#151a30]">
+      <option *ngFor="let item of carriers" [ngValue]="item" class="text-[#151a30]">{{item.name}}</option>
+    </select>
+  </div>
+  <div class="p-4 flex justify-center items-center">
+    <button type="submit" class="bg-blue-200 p-3 rounded-lg text-[#151a30] font-bold hover:bg-blue-300">Get Package Details</button>
+  </div>
+</div>
+</div>
+</form>
+<!-- <div *ngIf="loading | async"><app-loader></app-loader></div> -->
+<!-- <div *ngIf="true"><app-loader></app-loader></div> -->
+<div class="flex justify-center">
+  <app-package *ngIf="package" [package]="package[0]" [isEnableToAdd]="true"></app-package>
+</div>

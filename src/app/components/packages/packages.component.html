@@ -1,0 +1,10 @@
+<div *ngIf="packages?.length > 0; else noPackages" class="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1">
+  <div *ngFor="let item of packages" class="text-red-50 p-2 m-2 rounded-lg">
+    <app-package [package]="item"></app-package>
+  </div>
+</div>
+<ng-template #noPackages>
+  <div>
+    No packages yet
+  </div>
+</ng-template>

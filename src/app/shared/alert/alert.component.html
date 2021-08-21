@@ -1,0 +1,10 @@
+<div class="alert-outbound flex justify-center items-center">
+<div class="alert-container bg-[#151a30] border-2 {{alert.isSucceed ? 'border-green-200': 'border-red-300'}} lg:w-3/12 w-9/12 rounded-xl">
+  <div class="flex justify-center items-center py-10 px-20">
+    <div class="text-center">
+      <div class="text-center p-5 text-3xl">{{alert.text}}</div>
+      <button (click)="closeAlert()" type="button" class="{{alert.isSucceed ? 'bg-green-200': 'bg-red-300'}} p-3 rounded-lg text-[#151a30] font-bold {{alert.isSucceed ? 'bg-green-300': 'bg-red-400'}}">Ok!</button>
+    </div>
+  </div>
+</div>
+</div>
